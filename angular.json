@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/custom-library",
       "sourceRoot": "projects/custom-library/src",
-      "prefix": "lib",
+      "prefix": "kip",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

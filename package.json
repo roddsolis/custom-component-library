@@ -1,6 +1,7 @@
 {
-  "name": ".",
+  "name": "kipit-library",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run custom-library:storybook",
-    "build-storybook": "ng run custom-library:build-storybook"
+    "build-storybook": "ng run custom-library:build-storybook",
+    "build-tokens": "node splitTokens.js && node build-tokens.js"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +22,9 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
+    "@tokens-studio/sd-transforms": "^1.2.9",
     "rxjs": "~7.8.0",
+    "style-dictionary": "^4.3.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -29,12 +33,15 @@
     "@angular/cli": "^19.1.7",
     "@angular/compiler-cli": "^19.1.0",
     "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-docs": "^8.5.6",
     "@storybook/addon-essentials": "^8.5.6",
     "@storybook/addon-interactions": "^8.5.6",
     "@storybook/addon-onboarding": "^8.5.6",
     "@storybook/angular": "^8.5.6",
     "@storybook/blocks": "^8.5.6",
+    "@storybook/builder-webpack5": "^8.5.6",
     "@storybook/manager-api": "^8.5.6",
+    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/test": "^8.5.6",
     "@storybook/theming": "^8.5.6",
     "@types/jasmine": "~5.1.0",

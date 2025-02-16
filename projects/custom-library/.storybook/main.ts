@@ -2,12 +2,10 @@ import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [
-    '@storybook/addon-onboarding',
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-  ],
+  addons: ['@storybook/addon-docs'],
+  core: {
+    builder: 'webpack5',
+  },
   framework: {
     name: '@storybook/angular',
     options: {},
